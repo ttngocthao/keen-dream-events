@@ -11,7 +11,7 @@ export const color ={
 export default createGlobalStyle`
     *{
         font-size: 16px;
-        line-height: 1.4;
+        line-height: 1.6;
         font-family: 'Kanit', sans-serif;
         color: ${color.gray}
     }

@@ -12,24 +12,34 @@ const Wrap = styled.div`
     padding:1rem;
     p{
         color: white;
+       
     }
      @media only screen and (min-width: 700px){
           display: flex;
           align-items: center;
           padding-left: 9%;
           padding-right: 9%;
+          justify-content: space-between;
+          p{
+               font-size: 1.5625rem;
+          }
       }
 `
 const LeftCol = styled.div`
+padding-right: 0;
      @media only screen and (min-width: 700px){
          text-align: left;
-         max-width: 1038px;
+         max-width: 1000px;
+         padding-right: 2rem;
       }
 `
 const Title = styled.h2`
     color: white;
     font-weight: 600;
     font-size: 1.875rem;
+    @media only screen and (min-width: 700px){
+        font-size: 2.8125rem;
+      }
 `
 const ContactBtn = styled.a`
     font-family: 'Dancing Script', cursive;
@@ -42,7 +52,7 @@ const ContactBtn = styled.a`
     text-decoration: none;
     position: relative;
     font-weight: 700;
-    margin:1rem auto;
+    margin:1rem 0;
     display: inline-block;
     &::after{
         content: '';
@@ -58,6 +68,10 @@ const ContactBtn = styled.a`
         transform: translateX(-50%);
 
     }
+    @media only screen and (min-width: 700px){
+         margin-right: 5%;
+         font-size: 2.5rem;
+      }
 `
 const Contact = () => {
     const mailToAddress='';
@@ -65,10 +79,10 @@ const Contact = () => {
         <Wrap>
             <LeftCol>
                 <Title>
-                    We’d Love To HearFrom You!
+                    We’d Love To Hear From You!
                 </Title>
                 <p>
-                    Nostrud velit eiusmod do laboris. Lorem veniam non ad velit enim sint excepteur officia. Excepteur dolor proident enim laboris.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                 </p> 
             </LeftCol>
             
