@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://ttngocthao.github.io/keen-dream-events",
     title: "Keen Dream Events",
   },
   plugins: [
