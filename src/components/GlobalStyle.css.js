@@ -13,7 +13,8 @@ export default createGlobalStyle`
         font-size: 16px;
         line-height: 1.6;
         font-family: 'Kanit', sans-serif;
-        color: ${color.gray}
+        color: ${color.gray};
+        box-sizing: border-box;
     }
     body{
         margin: 0;

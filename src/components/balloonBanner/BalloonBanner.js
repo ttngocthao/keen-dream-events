@@ -7,8 +7,8 @@ const Figure = styled.figure`
     padding:0;
     max-width: 1575px;
      @media only screen and (min-width: 700px){
-         padding-left: 9%;
-         padding-right: 9%;
+         /* padding-left: 9%;
+         padding-right: 9%; */
      }
     img{
         width: 100%;

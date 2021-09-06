@@ -2,7 +2,9 @@ import React from "react"
 import About from "../components/About/About"
 import AdditionalInfo from "../components/additionalInfo/AdditionalInfo"
 import BalloonBanner from "../components/balloonBanner/BalloonBanner"
+import Banner from "../components/banner/Banner"
 import Contact from "../components/contact/Contact"
+import Intro from "../components/intro/Intro"
 import Layout from '../components/Layout'
 
 
@@ -12,7 +14,8 @@ import Layout from '../components/Layout'
 const IndexPage = () => {
   return (
     <Layout>
-      <h1>Keen Dream Events</h1>
+      <Banner/>
+      <Intro/>
       
       <About/>
       <BalloonBanner/>
