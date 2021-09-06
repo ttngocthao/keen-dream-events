@@ -7,7 +7,8 @@ import Contact from "../components/contact/Contact"
 import Intro from "../components/intro/Intro"
 import Layout from '../components/Layout'
 
-
+ // "predeploy": "npm run build",
+    // "deploy": "gh-pages -d public",
 
 
 // markup
