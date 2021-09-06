@@ -37,8 +37,10 @@ const Title = styled.h2`
     color: white;
     font-weight: 600;
     font-size: 1.875rem;
+    padding-bottom: 1rem;
     @media only screen and (min-width: 700px){
         font-size: 2.8125rem;
+        
       }
 `
 const ContactBtn = styled.a`

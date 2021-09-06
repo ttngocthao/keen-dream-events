@@ -18,9 +18,12 @@ export default createGlobalStyle`
     body{
         margin: 0;
     }
-    ul{
+    ul,p,div{
         padding:0;
         margin:0;
+         @media only screen and (min-width: 700px){
+             font-size: 1.5625rem;
+          }
     }
     h1,h2,h3,h4,h5,h6{
         font-family: 'Dancing Script', cursive;
@@ -28,9 +31,12 @@ export default createGlobalStyle`
         font-weight: bold;
         margin:0;
     }
-    h1,h2{
-        font-size: 2.8125rem; 
+    h1,h2{ 
+         font-size: 1.875rem;
+          @media only screen and (min-width: 700px){
+             font-size: 2.8125rem;
+          }
     }
-   
+  
 
 `
