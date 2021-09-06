@@ -1,18 +1,83 @@
 import React from 'react'
 import styled from 'styled-components'
 import {color} from '../GlobalStyle.css'
+import FBIcon from '../../images/facebook-icon.png'
+import InstagramIcon from '../../images/instagram-icon.png'
+import TwitterIcon from '../../images/twitter-icon.png'
+import StarIcon from '../../images/star-icon.png'
 
 const StyledFooter = styled.footer`
     background-color: ${color.black};
     color: white;
+    padding:1rem;
+    @media only screen and (min-width: 700px){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
 `
+const MediaList = styled.ul`
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+        padding: .5rem;
+        list-style: none;
+    }
+    img{
+        max-width: 30px;
+        width:100%;
+    }
+    
 
+`
+const Info = styled.div`
+    text-align: center;
+`
+const SocialMediaData =[
+    {
+        icon:FBIcon,
+        url:'/#',
+        orderInList:1
+    },
+    {
+        icon:InstagramIcon,
+        url:'/#',
+        orderInList:2
+    },
+    {
+        icon:TwitterIcon,
+        url:'/#',
+        orderInList:3
+    },
+    {
+        icon:StarIcon,
+        url:'/#',
+        orderInList:4
+    }
+]
 const Footer = () => {
+    const orderedData = SocialMediaData.sort((a,b)=> a.orderInList - b.orderInList)
     return (
         <StyledFooter>
-            <div>
+            <MediaList>
+                {orderedData.map((item,index)=>{
+                    return(
+                        <li key={index}>
+                            <a href={item.url}>
+                                <img src={item.icon} alt=''/>
+                            </a>
+                        </li>
+                    )
+                })}
+            </MediaList>
+            <Info>
                 © 2021 KEEN DREAM EVENTS LTD   /   CREATED BY <a href='https://www.mightycultured.co.uk/'>MIGHTY CULTURED LTD</a>
-            </div>
+            </Info>
+            
+            
             
         </StyledFooter>
     )
