@@ -15,6 +15,8 @@ const StyledFooter = styled.footer`
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
+        padding-left: 2.7%;
+        padding-right: 2.7%;
     }
 `
 const MediaList = styled.ul`

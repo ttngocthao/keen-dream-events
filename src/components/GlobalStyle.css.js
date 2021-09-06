@@ -15,6 +15,9 @@ export default createGlobalStyle`
         font-family: 'Kanit', sans-serif;
         color: ${color.gray}
     }
+    body{
+        margin: 0;
+    }
     ul{
         padding:0;
         margin:0;
