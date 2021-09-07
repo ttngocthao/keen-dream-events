@@ -2,9 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { color } from '../GlobalStyle.css'
 import BlueUnderline from '../../images/blue_underline.png'
-const Bkg = styled.div`
- 
-`
+
 const Wrap = styled.div`
    background-color: ${color.purple};
     color: white;

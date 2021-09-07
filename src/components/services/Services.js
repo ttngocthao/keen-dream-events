@@ -50,9 +50,13 @@ const serviceData =[
         img: AdditionalImg,
         name:'Additional Items',
         prices:[
-            {obj:'Giant 3ft Light Up Numbers',price:null},
-            {obj:'One Number',price:'£50',inline:true},
-            {obj:'Two Numbers',price:'£75',inline:true},
+            {
+                obj:'Giant 3ft Light Up Numbers',
+                details:[
+                    {obj:'One Number',price:'£50'},
+                    {obj:'Two Numbers',price:'£75'}
+                ]
+            },            
             {obj:'Decorated Picnic Table 240cm',price:'£100'},
             {obj:'Decorated Picnic Table 360cm',price:'£150'},
             {obj:'Neon In 120cm Gold Hoop With Foliage',price:'£100'},
@@ -78,17 +82,28 @@ const Wrap = styled.div`
 `
 const List = styled.ul`
 padding-top: 2rem;
+padding-left: 1rem;
+padding-right: 1rem;
+margin:0 auto;
+display: block;
 @media only screen and (min-width: 700px){
-    display: flex;   
+    display: flex; 
+    flex-wrap  :wrap ;
     width:100%;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 4rem;
+    padding-left: 0rem;
+padding-right: 0rem;
+}
+@media only screen and (min-width: 900px){
+     /* justify-content: space-between; */
 }
 `
 const StyledItem = styled.li`
     list-style: none;
     padding:0rem 0 1rem;
     overflow: hidden;
+   
     h3{
         font-size: 1.875rem;
         font-weight: bold;
@@ -108,23 +123,52 @@ const StyledItem = styled.li`
     }
      .details{
          padding: 1.5rem 0;
+         border: 5px solid #f5f5f5;
+         border-bottom:none;
      }
+     .price-list{
+         /* max-width: 420px; */
+         padding:1rem;
+         margin:0 auto;
+         box-sizing: border-box;
+         
+     }
+     .price-list-item{
+         font-weight: 600;
+         list-style: none;
+         text-align: center;
+         line-height: 1.0;
+         padding-top: 0.75rem;
+        
+       
+         .blue{
+             color: ${color.blue};
+         }
+         .pink{
+             color: ${color.pink};
+         }
+     }
+
     @media only screen and (min-width: 700px){
         max-width: 550px;
         box-sizing: border-box;
         margin-right: 1rem;
+         min-width: 322px;
         &:last-child{
             margin: 0;
         }
-        .details{
+        /* .details{
              border: 5px solid #f5f5f5;
              border-bottom:none;
-        }
+        } */
         h3{
             font-size: 2.625rem;
         }
         img.decoIcon{       
             max-width: 9.0625rem;        
+        }
+        .price-list{
+           min-height: 439px;
         }
     }
 `
@@ -134,7 +178,26 @@ const Item = ({data})=>{
             <div className='details'>
                 <img className='decoIcon' alt='' src={data.icon}/>
                 <h3>{data.name}</h3>
-                <p>Price list here</p>   
+                <ul className='price-list'>
+                    {data.prices.map((item,index)=>{
+                        const priceTxtColor = item.price ? (index%2===0 ? 'blue' :'pink') : ''
+                       if(item.details){
+                           return(
+                               <li className={`price-list-item`} key={index}>
+                                   {item.obj} {item.details.map((detail,detailIndex)=><span key={detailIndex}>
+                                       {detail.obj} &nbsp;
+                                       <span className={detailIndex%2===0 ? 'blue' : 'pink'}>{detail.price}&nbsp;</span>
+                                    </span>)}
+                               </li>
+                           )
+                       }else{
+                            return(<li className={`price-list-item`} key={index}>{item.obj}&nbsp;<span className={priceTxtColor}>{item.price ? item.price : ''} </span></li>)
+                       }
+                           
+                       
+                        })}
+                </ul>
+               
             </div>
            
             <img className='decoImg' alt='' src={data.img}/>
