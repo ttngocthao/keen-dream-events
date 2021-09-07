@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://ttngocthao.github.io/keen-dream-events",
+    siteUrl: "https://keen-dream-events.netlify.app/",
     title: "Keen Dream Events",
   },
   plugins: [

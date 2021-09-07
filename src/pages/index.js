@@ -6,6 +6,7 @@ import Banner from "../components/banner/Banner"
 import Contact from "../components/contact/Contact"
 import Intro from "../components/intro/Intro"
 import Layout from '../components/Layout'
+import Services from "../components/services/Services"
 
  // "predeploy": "npm run build",
     // "deploy": "gh-pages -d public",
@@ -20,6 +21,7 @@ const IndexPage = () => {
       
       <About/>
       <BalloonBanner/>
+      <Services/>
       <AdditionalInfo/>
       <BalloonBanner/>
       <Contact/>
