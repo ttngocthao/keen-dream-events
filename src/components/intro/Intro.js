@@ -4,14 +4,20 @@ import styled from 'styled-components'
 const Wrap = styled.div`
     padding: 0rem 1rem;
     text-align: center;
-    max-width: 1440px;
+    max-width: 1408px;
     margin:0 auto;
     box-sizing: border-box;
+    h1{
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
     @media only screen and (min-width: 700px){
         text-align: left;
         h1{
-            text-align: center;
-            padding-bottom: 1rem;
+            
+            padding-top: 2rem;
+            padding-bottom: 4rem;
         }
     }
 `

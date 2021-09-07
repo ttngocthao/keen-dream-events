@@ -11,10 +11,11 @@ const Figure = styled.figure`
     width: 100%;
     max-width: 1920px;
      padding-top: 6.25rem;
-     padding-bottom: 2rem;
+     padding-bottom: 1rem;
      margin:0 auto;
       @media only screen and (min-width: 700px){
            padding-top: 10.3125rem;
+           padding-bottom: 2rem;
       }
    
     img{

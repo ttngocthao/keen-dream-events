@@ -71,19 +71,23 @@ const serviceData =[
 const Wrap = styled.div`
  max-width: 1575px;
     margin:0 auto;
-    padding:2rem 0rem;
+    padding:1rem 0rem;
+    @media only screen and (min-width: 700px){
+        padding:2rem 0rem;
+    }
 `
 const List = styled.ul`
+padding-top: 2rem;
 @media only screen and (min-width: 700px){
-    display: flex;
-   
+    display: flex;   
     width:100%;
     justify-content: space-between;
+    padding-top: 4rem;
 }
 `
 const StyledItem = styled.li`
     list-style: none;
-    padding:1rem 0;
+    padding:0rem 0 1rem;
     overflow: hidden;
     h3{
         font-size: 1.875rem;

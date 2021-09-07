@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Wrap = styled.h2`
     text-align: center;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
 `
 const SectionTitle = ({title}) => {
     return (

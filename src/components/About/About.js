@@ -7,15 +7,20 @@ import AvatarImg from '../../images/avatar.png'
 const Wrap = styled.div`
      max-width: 1408px;
     margin:0 auto;
-    padding:2rem 1rem 0rem;
+    padding:0rem 1rem;
     text-align: center;
      @media only screen and (min-width: 700px){
          text-align: left;
+          padding-top:4rem;
      }
 `
 const FlexWrap = styled.div`
+padding-top: 2rem;
+            padding-bottom: 1rem;
     @media only screen and (min-width: 900px){
             display: flex;
+            padding-top: 4rem;
+            padding-bottom: 2rem;
         }
 `
 const Avatar = styled.figure`
@@ -32,7 +37,8 @@ const Avatar = styled.figure`
         width: 100%;
     }
     img.mobile{
-        
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         @media only screen and (min-width: 900px){
             display: none;
         }
