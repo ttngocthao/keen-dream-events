@@ -153,7 +153,7 @@ const StyledItem = styled.li`
      }
 
     @media only screen and (min-width: 700px){
-        max-width: 500px;
+        max-width: 495px;
         box-sizing: border-box;
         margin-right: 1rem;
          min-width: 322px;
