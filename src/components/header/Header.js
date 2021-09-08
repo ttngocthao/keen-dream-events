@@ -66,15 +66,7 @@ const StyledHeader = styled.header`
         left:0;
         
     }
-`
-const NavMobile = styled.nav`
-   
-    .mobile-nav-ul{
-         background-color: #17172F;
-         padding:1rem 2rem;
-         
-    }
-    .mobile-nav-item a{
+    .nav-item a{
         font-size: 1.875rem;
          font-family: 'Dancing Script', cursive;
          font-weight: bold;
@@ -84,6 +76,15 @@ const NavMobile = styled.nav`
          display: block;
          padding:.5rem 0;
     }
+`
+const NavMobile = styled.nav`
+   
+    .mobile-nav-ul{
+         background-color: #17172F;
+         padding:1rem 2rem;
+         
+    }
+    
      @media only screen and (min-width: 700px){
          display: none;
      }
@@ -109,6 +110,33 @@ const MobileBar = styled.div`
         }
     }
    
+`
+const NavDesk = styled.nav`
+    .desk-nav-ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1238px;
+        box-sizing: border-box;
+        margin: 1rem auto;
+         padding:0rem 1rem;
+         
+    }
+    .desk-item a{
+        /* padding: 1rem 2rem; */
+        font-size: 2.5rem;
+         .underlined{
+             /* left: 2rem; */
+             width: 110px;
+        }
+    }
+    display: none;
+    .logo-figure{
+        min-width: 126px;
+    }
+     @media only screen and (min-width: 700px){
+         display: block;
+     }
 `
 
 const Header = () => {
@@ -151,7 +179,7 @@ const Header = () => {
                 {showMobileMenuList &&  <ul className='mobile-nav-ul'>
                     {sortedNavData.map((item,index)=>{
                         return(
-                            <li className='mobile-nav-item' key={index}>
+                            <li className='nav-item' key={index}>
                                 <a aria-label={item.name} href={item.url}>
                                    {item.name} 
                                    <span className='underlined' style={{backgroundImage:`url(${item.underlineImg})`,width: item?.itemSize==="L" ? '88.85px':'65.79px'}}></span>
@@ -162,6 +190,39 @@ const Header = () => {
                     })}
                 </ul>}
            </NavMobile>
+           <NavDesk>
+                <ul className='desk-nav-ul'>
+               {sortedNavData.filter(item=>item.orderInMainList<3).map((item,index)=>{
+                        return(
+                            <li className='nav-item desk-item' key={index}>
+                                <a aria-label={item.name} href={item.url}>
+                                   {item.name} 
+                                   <span className='underlined' style={{backgroundImage:`url(${item.underlineImg})`,width: item?.itemSize==="L" ? '110px':'81.71px'}}></span>
+                                </a>
+                                
+                            </li>
+                        )
+                    })}
+                    <li>
+                        <a href='/' aria-label='Keen Dream Events - Home'>
+                            <figure className='logo-figure'>
+                                <img src={LogoImg} alt='Keen Dream Events - Home' />
+                            </figure>
+                        </a>
+                    </li>
+                    {sortedNavData.filter(item=>item.orderInMainList>2).map((item,index)=>{
+                        return(
+                            <li className='nav-item desk-item' key={index}>
+                                <a aria-label={item.name} href={item.url}>
+                                   {item.name} 
+                                   <span className='underlined' style={{backgroundImage:`url(${item.underlineImg})`,width: item?.itemSize==="L" ? '110px':'81.71px'}}></span>
+                                </a>
+                                
+                            </li>
+                        )
+                    })}
+                    </ul>
+           </NavDesk>
           
         </StyledHeader>
     )
