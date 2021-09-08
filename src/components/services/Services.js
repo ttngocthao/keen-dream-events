@@ -98,9 +98,9 @@ padding-right: 0rem;
 @media only screen and (min-width: 900px){
      /* justify-content: space-between; */
 }
-  @media only screen and (min-width: 1200px){
+  /* @media only screen and (min-width: 1200px){
        justify-content: space-between;
-     }
+     } */
 `
 const StyledItem = styled.li`
     list-style: none;
