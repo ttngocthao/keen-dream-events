@@ -88,7 +88,7 @@ margin:0 auto;
 display: block;
 @media only screen and (min-width: 700px){
     display: flex; 
-    flex-wrap  :wrap ;
+   // flex-wrap  :wrap ;
     width:100%;
     justify-content: center;
     padding-top: 4rem;
@@ -156,7 +156,7 @@ const StyledItem = styled.li`
         max-width: 495px;
         box-sizing: border-box;
         margin-right: 1rem;
-         min-width: 322px;
+         /* min-width: 250px; */
         &:last-child{
             margin: 0;
         }
