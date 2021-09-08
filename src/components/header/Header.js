@@ -118,7 +118,7 @@ const NavDesk = styled.nav`
         justify-content: space-between;
         max-width: 1238px;
         box-sizing: border-box;
-        margin: 1rem auto;
+        margin: 0rem auto;
          padding:0rem 1rem;
          
     }
@@ -133,6 +133,7 @@ const NavDesk = styled.nav`
     display: none;
     .logo-figure{
         min-width: 126px;
+        max-width: 130px;
     }
      @media only screen and (min-width: 700px){
          display: block;

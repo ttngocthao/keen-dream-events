@@ -150,7 +150,7 @@ const StyledItem = styled.li`
      }
 
     @media only screen and (min-width: 700px){
-        max-width: 550px;
+        max-width: 450px;
         box-sizing: border-box;
         margin-right: 1rem;
          min-width: 322px;
@@ -171,6 +171,9 @@ const StyledItem = styled.li`
            min-height: 439px;
         }
     }
+     @media only screen and (min-width: 1200px){
+        max-width: 550px;
+     }
 `
 const Item = ({data})=>{
     return(
