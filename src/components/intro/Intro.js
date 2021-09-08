@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrap = styled.div`
-    padding: 0rem 1rem;
+    padding: 0rem 2rem;
     text-align: center;
     max-width: 1408px;
     margin:0 auto;

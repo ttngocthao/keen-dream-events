@@ -4,7 +4,7 @@ import SectionTitle from '../SectionTitle/SectionTitle'
 const Wrap = styled.div`
     max-width: 1408px;
     margin:0 auto;
-    padding:1rem 1rem 0rem;
+    padding:1rem 2rem 0rem;
     @media only screen and (min-width: 700px){
         padding-top: 2rem;
     }

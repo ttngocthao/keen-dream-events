@@ -7,7 +7,7 @@ import AvatarImg from '../../images/avatar.png'
 const Wrap = styled.div`
      max-width: 1408px;
     margin:0 auto;
-    padding:0rem 1rem;
+    padding:0rem 2rem;
     text-align: center;
      @media only screen and (min-width: 700px){
          text-align: left;
@@ -54,7 +54,7 @@ const Avatar = styled.figure`
 
 const About = () => {
     return (
-        <Wrap>
+        <Wrap id='about'>
             <Avatar>
               <img className='mobile' src={AvatarImg} alt=''/>  
             </Avatar>

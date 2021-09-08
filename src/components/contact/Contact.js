@@ -7,7 +7,7 @@ const Wrap = styled.div`
    background-color: ${color.purple};
     color: white;
     text-align: center;
-    padding:1rem;
+    padding:1rem 2rem;
     p{
         color: white;
        

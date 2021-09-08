@@ -26,6 +26,28 @@ export default createGlobalStyle`
              font-size: 1.5625rem;
           }
     }
+    button{
+        background-color: transparent;
+            border:none;
+            box-shadow: none;
+            padding:0;
+            cursor: pointer;
+            &:focus,&:focus-visible,&:target{
+                outline: none;
+                border: 2px solid white;
+                padding: .25rem;
+            }
+
+    }
+    figure{
+        margin: 0;
+        img{
+            width: 100%;
+        }
+    }
+    li{
+        list-style: none;
+    }
     h1,h2,h3,h4,h5,h6{
         font-family: 'Dancing Script', cursive;
         color: ${color.pink};

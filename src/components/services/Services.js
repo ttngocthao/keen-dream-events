@@ -82,8 +82,8 @@ const Wrap = styled.div`
 `
 const List = styled.ul`
 padding-top: 2rem;
-padding-left: 1rem;
-padding-right: 1rem;
+padding-left: 2rem;
+padding-right: 2rem;
 margin:0 auto;
 display: block;
 @media only screen and (min-width: 700px){
@@ -118,9 +118,9 @@ const StyledItem = styled.li`
     img.decoIcon{       
         max-width: 4.9375rem;        
     }
-    img.decoImg{
+    /* img.decoImg{
         max-width: 31.5625rem;
-    }
+    } */
      .details{
          padding: 1.5rem 0;
          border: 5px solid #f5f5f5;
@@ -184,7 +184,8 @@ const Item = ({data})=>{
                        if(item.details){
                            return(
                                <li className={`price-list-item`} key={index}>
-                                   {item.obj} {item.details.map((detail,detailIndex)=><span key={detailIndex}>
+                                   {item.obj} <br/> 
+                                   {item.details.map((detail,detailIndex)=><span key={detailIndex}>
                                        {detail.obj} &nbsp;
                                        <span className={detailIndex%2===0 ? 'blue' : 'pink'}>{detail.price}&nbsp;</span>
                                     </span>)}

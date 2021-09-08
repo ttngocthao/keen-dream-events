@@ -9,7 +9,7 @@ import StarIcon from '../../images/star-icon.png'
 const StyledFooter = styled.footer`
     background-color: ${color.black};
     color: white;
-    padding:1rem;
+    padding:1rem 2rem;
     @media only screen and (min-width: 700px){
         display: flex;
         flex-direction: row-reverse;
