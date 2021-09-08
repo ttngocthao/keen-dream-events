@@ -76,7 +76,7 @@ const ContactBtn = styled.a`
 const Contact = () => {
     const mailToAddress='';
     return (
-        <Wrap>
+        <Wrap id='contact'>
             <LeftCol>
                 <Title>
                     We’d Love To Hear From You!

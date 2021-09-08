@@ -210,7 +210,7 @@ const Services = () => {
     const sortedData = serviceData.sort((a,b)=>a.orderInList-b.orderInList);
     //console.log(sortedData)
     return (
-        <Wrap>
+        <Wrap id='services'>
            <SectionTitle title='Different Services Available'/> 
             <List>
                 {sortedData.map((item,index)=><Item data={item} key={index}/>)}

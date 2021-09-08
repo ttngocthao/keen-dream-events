@@ -11,7 +11,7 @@ import WhiteUnderlineImg from '../../images/white_underline.png'
 const navItems =[
     {
         name:'Home',
-        url:'/',       
+        url:'/#home',       
         orderInMainList:1,
         underlineImg:BlueUnderlineImg
         
@@ -179,7 +179,7 @@ const Header = () => {
                 {showMobileMenuList &&  <ul className='mobile-nav-ul'>
                     {sortedNavData.map((item,index)=>{
                         return(
-                            <li className='nav-item' key={index}>
+                            <li className='nav-item' key={index} onClick={()=>setShowMobileMenuList(false)}>
                                 <a aria-label={item.name} href={item.url}>
                                    {item.name} 
                                    <span className='underlined' style={{backgroundImage:`url(${item.underlineImg})`,width: item?.itemSize==="L" ? '88.85px':'65.79px'}}></span>

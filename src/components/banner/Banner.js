@@ -38,7 +38,7 @@ const Figure = styled.figure`
 `
 const Banner = () => {
     return (
-        <div>
+        <div id='home'>
             <Figure>
                 <img className='desktop' alt='' src={BannerImg}/>
                 <img className='mobile' alt='' src={SmallBannerImg}/>
