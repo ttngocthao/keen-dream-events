@@ -6,13 +6,16 @@ const Wrap = styled.div`
     margin:0 auto;
     padding:1rem 2rem 0rem;
     @media only screen and (min-width: 700px){
-        padding-top: 2rem;
+        
+        padding:0;
+        padding-top: 1rem;
+        margin: 0 15.3%;
     }
 `
 const  StyledP= styled.p`
     padding:2rem 0 1rem;
     @media only screen and (min-width: 700px){
-        padding:4rem 0 2rem;
+        padding:2rem 0 2rem;
     }
 `
 

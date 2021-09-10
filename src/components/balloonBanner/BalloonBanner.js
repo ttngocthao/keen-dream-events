@@ -7,8 +7,10 @@ const Figure = styled.figure`
     padding:0 2rem;
     max-width: 1575px;
      @media only screen and (min-width: 700px){
-         margin:2rem auto;
+         /* margin:1rem auto; */
          padding:0;
+         padding:0;
+         margin: 1rem 15.3%;
      }
     img{
         width: 100%;

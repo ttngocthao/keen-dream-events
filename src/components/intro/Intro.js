@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Wrap = styled.div`
     padding: 0rem 2rem;
     text-align: center;
-    max-width: 1408px;
+    /* max-width: 1320px; */
     margin:0 auto;
     box-sizing: border-box;
     h1{
@@ -14,10 +14,12 @@ const Wrap = styled.div`
         }
     @media only screen and (min-width: 700px){
         text-align: left;
+        padding:0;
+        margin: 0 15.3%;
         h1{
             
-            padding-top: 2rem;
-            padding-bottom: 4rem;
+            padding-top: 1rem;
+            padding-bottom: 2rem;
         }
     }
 `

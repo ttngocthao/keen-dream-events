@@ -15,6 +15,7 @@ export default createGlobalStyle`
         font-family: 'Kanit', sans-serif;
         color: ${color.gray};
         box-sizing: border-box;
+        font-weight: 300;
     }
     body{
         margin: 0;
@@ -23,7 +24,7 @@ export default createGlobalStyle`
         padding:0;
         margin:0;
          @media only screen and (min-width: 700px){
-             font-size: 1.5625rem;
+             font-size: 20px;
           }
     }
     button{
@@ -57,7 +58,7 @@ export default createGlobalStyle`
     h1,h2{ 
          font-size: 1.875rem;
           @media only screen and (min-width: 700px){
-             font-size: 2.8125rem;
+             font-size: 32px;
           }
     }
   

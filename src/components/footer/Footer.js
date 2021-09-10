@@ -37,6 +37,8 @@ const MediaList = styled.ul`
 `
 const Info = styled.div`
     text-align: center;
+    font-size:1rem;
+    font-weight: 400;
 `
 const SocialMediaData =[
     {

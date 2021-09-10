@@ -13,9 +13,13 @@ const Figure = styled.figure`
      padding-top: 6.25rem;
      padding-bottom: 1rem;
      margin:0 auto;
+
       @media only screen and (min-width: 700px){
-           padding-top: 8.3125rem;
-           padding-bottom: 2rem;
+           padding-top: 8.8125rem;
+           padding-bottom: 1rem;
+             box-sizing: border-box;
+             padding-left: 8.9%;
+             padding-right: 8.9%;
       }
    
     img{
@@ -23,12 +27,14 @@ const Figure = styled.figure`
         max-width: 1575px;
         margin:0 auto;
         display: block;
+        box-sizing: border-box;
         &.desktop{
             display: none;
         }
          @media only screen and (min-width: 700px){
              &.desktop{
                  display: block;
+                  /* margin:0 8.9%; */
              }
              &.mobile{
                  display: none;

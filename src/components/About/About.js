@@ -5,13 +5,15 @@ import AvatarImg from '../../images/avatar.png'
 
 
 const Wrap = styled.div`
-     max-width: 1408px;
+     /* max-width: 1320px; */
     margin:0 auto;
     padding:0rem 2rem;
     text-align: center;
      @media only screen and (min-width: 700px){
-         text-align: left;
-          padding-top:4rem;
+         text-align: left;         
+        padding:0; 
+        padding-top:2rem;
+        margin: 0 15.3%;
      }
 `
 const FlexWrap = styled.div`
@@ -19,8 +21,8 @@ padding-top: 2rem;
             padding-bottom: 1rem;
     @media only screen and (min-width: 900px){
             display: flex;
-            padding-top: 4rem;
-            padding-bottom: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
         }
 `
 const Avatar = styled.figure`

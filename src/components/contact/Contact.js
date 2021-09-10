@@ -8,18 +8,21 @@ const Wrap = styled.div`
     color: white;
     text-align: center;
     padding:1rem 2rem;
+   
     p{
-        color: white;
+        color: white; 
+        font-weight: 400;
        
     }
      @media only screen and (min-width: 700px){
           display: flex;
           align-items: center;
-          padding-left: 9%;
-          padding-right: 9%;
+          padding-left: 15.3%;
+          padding-right: 15.3%;
+          
           justify-content: space-between;
           p{
-               font-size: 1.5625rem;
+               font-size: 20px;
           }
       }
 `
@@ -37,7 +40,7 @@ const Title = styled.h2`
     font-size: 1.875rem;
     padding-bottom: 1rem;
     @media only screen and (min-width: 700px){
-        font-size: 2.8125rem;
+        font-size: 2.1875rem;
         
       }
 `
@@ -47,7 +50,7 @@ const ContactBtn = styled.a`
     background-color: transparent;
     border: 2px solid white;
     color:white;
-    padding:0rem 1rem 0.25rem;
+    padding:0rem 1rem;
     border-radius: 7px;
     text-decoration: none;
     position: relative;
@@ -69,8 +72,8 @@ const ContactBtn = styled.a`
 
     }
     @media only screen and (min-width: 700px){
-         margin-right: 5%;
-         font-size: 2.5rem;
+         
+         font-size: 32px;
       }
 `
 const Contact = () => {

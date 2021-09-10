@@ -77,7 +77,7 @@ const Wrap = styled.div`
     margin:0 auto;
     padding:1rem 0rem;
     @media only screen and (min-width: 700px){
-        padding:2rem 0rem;
+        padding:1rem 15.3%;
     }
 `
 const List = styled.ul`
@@ -91,7 +91,7 @@ display: block;
    // flex-wrap  :wrap ;
     width:100%;
     justify-content: center;
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-left: 0rem;
 padding-right: 0rem;
 }
@@ -106,7 +106,7 @@ const StyledItem = styled.li`
     list-style: none;
     padding:0rem 0 1rem;
     overflow: hidden;
-   
+  
     h3{
         font-size: 1.875rem;
         font-weight: bold;
@@ -143,7 +143,9 @@ const StyledItem = styled.li`
          line-height: 1.0;
          padding-top: 0.75rem;
         
-       
+            span{
+                 font-weight: 600;
+            }
          .blue{
              color: ${color.blue};
          }
@@ -156,7 +158,7 @@ const StyledItem = styled.li`
         max-width: 495px;
         box-sizing: border-box;
         margin-right: 1rem;
-         /* min-width: 250px; */
+          min-width: 320px;
         &:last-child{
             margin: 0;
         }
@@ -173,20 +175,32 @@ const StyledItem = styled.li`
         .price-list{
            min-height: 439px;
         }
+        .second-item{
+            max-width: 235px;
+            /* .price-list-item{
+                line-height: 1.5;
+            } */
+        }
+    
     }
      /* @media only screen and (min-width: 1200px){
         max-width: 550px;
      } */
 `
 const Item = ({data})=>{
+    const extraClassForBalloonsItem=[];
+    if(data.name==='Balloons'){
+        extraClassForBalloonsItem.push('second-item')
+    }
     return(
         <StyledItem>
             <div className='details'>
                 <img className='decoIcon' alt='' src={data.icon}/>
                 <h3>{data.name}</h3>
-                <ul className='price-list'>
+                <ul className={`price-list ${extraClassForBalloonsItem.join(' ')}`}>
                     {data.prices.map((item,index)=>{
                         const priceTxtColor = item.price ? (index%2===0 ? 'blue' :'pink') : ''
+                       
                        if(item.details){
                            return(
                                <li className={`price-list-item`} key={index}>
@@ -198,7 +212,7 @@ const Item = ({data})=>{
                                </li>
                            )
                        }else{
-                            return(<li className={`price-list-item`} key={index}>{item.obj}&nbsp;<span className={priceTxtColor}>{item.price ? item.price : ''} </span></li>)
+                            return(<li className={`price-list-item `} key={index}>{item.obj}&nbsp;<span className={priceTxtColor}>{item.price ? item.price : ''} </span></li>)
                        }
                            
                        
