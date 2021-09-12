@@ -10,7 +10,7 @@ import PinkUnderlineImg_S from '../../images/pink_underline.png'
 import PinkUnderlineImg from '../../images/pink_underline_large.png'
 import WhiteUnderlineImg from '../../images/white_underline.png'
 import WhiteUnderlineImg_S from '../../images/white_underline_small.png'
-import { C } from '@styled-icons/simple-icons'
+
 
 
 const navItems =[
@@ -237,7 +237,7 @@ const Header = () => {
                         </figure>
                     </a>
                     <button className='menu-btn' aria-label='menu button' onClick={menuClickHandle}>
-                        <img src={MenuOpen} alt='menu button'/>
+                        <img src={!showMobileMenuList? MenuOpen :MenuClose} alt='menu button'/>
                     </button>
                </MobileBar>
                 {showMobileMenuList &&  <ul className='mobile-nav-ul'>

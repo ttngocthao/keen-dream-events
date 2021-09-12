@@ -44,22 +44,26 @@ const SocialMediaData =[
     {
         icon:FBIcon,
         url:'/#',
-        orderInList:1
+        orderInList:1,
+        label:'Facebook'
     },
     {
         icon:InstagramIcon,
         url:'/#',
-        orderInList:2
+        orderInList:2,
+        label:'Instagram'
     },
     {
         icon:TwitterIcon,
         url:'/#',
-        orderInList:3
+        orderInList:3,
+        label:'Twitter'
     },
     {
         icon:StarIcon,
         url:'/#',
-        orderInList:4
+        orderInList:4,
+        label:'TBC'
     }
 ]
 const Footer = () => {
@@ -70,7 +74,7 @@ const Footer = () => {
                 {orderedData.map((item,index)=>{
                     return(
                         <li key={index}>
-                            <a href={item.url}>
+                            <a href={item.url} aria-label={`Follow us on ${item.label}`}>
                                 <img src={item.icon} alt=''/>
                             </a>
                         </li>

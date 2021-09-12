@@ -3,7 +3,9 @@ import { Helmet } from 'react-helmet'
 import TabIcon from '../images/icon.png'
 const Seo = ({ title }) => {
     return (
-        <Helmet>
+         <Helmet>
+           <html lang="en" amp />
+            <meta name="description" content="We are passionate about making any Event extra special. We like to provide that extra touch that will bring the wow factor and put a smile on people’s faces. From Bell tents to balloon arches there isn’t much we won’t do." />
             <title>Keen Dream Events{title ? ` - ${title}` : ''}</title>
             <link rel='icon' type="image/icon" href={TabIcon} />
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
