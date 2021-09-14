@@ -7,8 +7,8 @@ import AdditionalIcon from '../../images/additional-icon.png'
 import TeepeeImg from '../../images/teepee-img.png'
 import BalloonImg from '../../images/balloon-img.png'
 import AdditionalImg from '../../images/additional-img.png'
-import {color} from '../GlobalStyle.css'
 
+import ServiceItem from './ServiceItem'
 const serviceData =[
     {
         icon:TeepeeIcon,
@@ -102,139 +102,19 @@ padding-right: 0rem;
        justify-content: space-between;
      } */
 `
-const StyledItem = styled.li`
-    list-style: none;
-    padding:0rem 0 1rem;
-    overflow: hidden;
-  
-    h3{
-        font-size: 1.875rem;
-        font-weight: bold;
-        color: ${color.gray};
-        text-align:center;
-    }
-    img{
-         display: block;
-         width: 100%;
-         margin: 0 auto;
-    }
-    img.decoIcon{       
-        max-width: 4.9375rem;        
-    }
-    /* img.decoImg{
-        max-width: 31.5625rem;
-    } */
-     .details{
-         padding: 1.5rem 0;
-         border: 5px solid #f5f5f5;
-         border-bottom:none;
-     }
-     .price-list{
-         /* max-width: 420px; */
-         padding:1rem;
-         margin:0 auto;
-         box-sizing: border-box;
-         
-     }
-     .price-list-item{
-         font-weight: 600;
-         list-style: none;
-         text-align: center;
-         line-height: 1.0;
-         padding-top: 0.75rem;
-        
-            span{
-                 font-weight: 600;
-            }
-         .blue{
-             color: ${color.blue};
-         }
-         .pink{
-             color: ${color.pink};
-         }
-     }
 
-    @media only screen and (min-width: 700px){
-        max-width: 495px;
-        box-sizing: border-box;
-        margin-right: 1rem;
-          min-width: 320px;
-        &:last-child{
-            margin: 0;
-        }
-        /* .details{
-             border: 5px solid #f5f5f5;
-             border-bottom:none;
-        } */
-        h3{
-            font-size: 2.625rem;
-        }
-        img.decoIcon{       
-            max-width: 9.0625rem;        
-        }
-        .price-list{
-           min-height: 439px;
-        }
-        .second-item{
-            max-width: 235px;
-            /* .price-list-item{
-                line-height: 1.5;
-            } */
-        }
-    
-    }
-     /* @media only screen and (min-width: 1200px){
-        max-width: 550px;
-     } */
-`
-const Item = ({data})=>{
-    const extraClassForBalloonsItem=[];
-    if(data.name==='Balloons'){
-        extraClassForBalloonsItem.push('second-item')
-    }
-    return(
-        <StyledItem>
-            <div className='details'>
-                <img className='decoIcon' alt='' src={data.icon}/>
-                <h3>{data.name}</h3>
-                <ul className={`price-list ${extraClassForBalloonsItem.join(' ')}`}>
-                    {data.prices.map((item,index)=>{
-                        const priceTxtColor = item.price ? (index%2===0 ? 'blue' :'pink') : ''
-                       
-                       if(item.details){
-                           return(
-                               <li className={`price-list-item`} key={index}>
-                                   {item.obj} <br/> 
-                                   {item.details.map((detail,detailIndex)=><span key={detailIndex}>
-                                       {detail.obj} &nbsp;
-                                       <span className={detailIndex%2===0 ? 'blue' : 'pink'}>{detail.price}&nbsp;</span>
-                                    </span>)}
-                               </li>
-                           )
-                       }else{
-                            return(<li className={`price-list-item `} key={index}>{item.obj}&nbsp;<span className={priceTxtColor}>{item.price ? item.price : ''} </span></li>)
-                       }
-                           
-                       
-                        })}
-                </ul>
-               
-            </div>
-           
-            <img className='decoImg' alt='' src={data.img}/>
-        </StyledItem>
-    )
-}
 
 const Services = () => {
+   
     const sortedData = serviceData.sort((a,b)=>a.orderInList-b.orderInList);
-    //console.log(sortedData)
+   
     return (
         <Wrap id='services'>
            <SectionTitle title='Different Services Available'/> 
             <List>
-                {sortedData.map((item,index)=><Item data={item} key={index}/>)}
+                {sortedData.map((item,index)=><ServiceItem data={item} key={index}/>)}
             </List>
+            
         </Wrap>
     )
 }
