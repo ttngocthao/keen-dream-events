@@ -54,7 +54,7 @@ const StyledItem = styled.li`
      }
 
     @media only screen and (min-width: 700px){
-        max-width: 495px;
+        /* max-width: 495px; */
         box-sizing: border-box;
         margin-right: 1rem;
           min-width: 320px;
@@ -72,13 +72,14 @@ const StyledItem = styled.li`
             max-width: 9.0625rem;        
         }
         .price-list{
-           min-height: 450px;
+           min-height: 510px;
         }
-        .second-item{
-            max-width: 235px;
-            /* .price-list-item{
-                line-height: 1.5;
-            } */
+        .second-item,.first-item{
+            max-width: 240px;
+           
+            .price-list-item{
+                line-height: 1.8;
+            }
         }
     
     }
@@ -90,6 +91,9 @@ const StyledItem = styled.li`
 const ServiceItem = ({data})=>{
      
     const extraClassForBalloonsItem=[];
+    if(data.name==='Teepee Parties'){
+        extraClassForBalloonsItem.push('first-item')
+    }
     if(data.name==='Balloons'){
         extraClassForBalloonsItem.push('second-item')
     }

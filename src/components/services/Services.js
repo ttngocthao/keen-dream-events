@@ -66,6 +66,8 @@ const serviceData =[
             {obj:'6ft Doughnut Wall',price:'£120'},
             {obj:'Peacock Chair',price:'£75'},
             {obj:'Small Sweet Cart',price:'£50'},
+            {obj:'4ft LOVE letters',price:'£200'},
+            {obj:'4ft 30 numbers',price:'£100'}
         ],
         orderInList:3
     }
@@ -73,11 +75,15 @@ const serviceData =[
 ]
 
 const Wrap = styled.div`
- max-width: 1575px;
+ /* max-width: 1575px; */
     margin:0 auto;
     padding:1rem 0rem;
     @media only screen and (min-width: 700px){
-        padding:1rem 15.3%;
+        padding:1rem ;
+        
+    }
+     @media only screen and (min-width: 1025px){
+        padding:1rem 8.9%;
     }
 `
 const List = styled.ul`
@@ -88,19 +94,18 @@ margin:0 auto;
 display: block;
 @media only screen and (min-width: 700px){
     display: flex; 
-   // flex-wrap  :wrap ;
+   flex-wrap  :wrap ;
     width:100%;
     justify-content: center;
     padding-top: 2rem;
     padding-left: 0rem;
 padding-right: 0rem;
 }
-@media only screen and (min-width: 900px){
-     /* justify-content: space-between; */
-}
-  /* @media only screen and (min-width: 1200px){
+
+ @media only screen and (min-width: 1025px){
+       flex-wrap: nowrap;
        justify-content: space-between;
-     } */
+    }
 `
 
 

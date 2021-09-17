@@ -22,8 +22,8 @@ const IndexPage = () => {
       <About/>
       <BalloonBanner/>
       <Services/>
-      <AdditionalInfo/>
       <BalloonBanner/>
+      <AdditionalInfo/>      
       <Contact/>
     </Layout>
   )

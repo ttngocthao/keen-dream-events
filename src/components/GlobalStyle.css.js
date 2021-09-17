@@ -44,6 +44,7 @@ export default createGlobalStyle`
         margin: 0;
         img{
             width: 100%;
+            vertical-align: bottom;
         }
     }
     li{

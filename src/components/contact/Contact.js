@@ -5,13 +5,15 @@ import BlueUnderline from '../../images/blue_underline.png'
 
 const Wrap = styled.div`
    background-color: ${color.purple};
-    color: white;
+    color: black;
     text-align: center;
     padding:1rem 2rem;
    
     p{
-        color: white; 
+        color: black; 
         font-weight: 400;
+        margin-bottom: 1rem; 
+        line-height: 1.25;
        
     }
      @media only screen and (min-width: 700px){
@@ -35,7 +37,7 @@ padding-right: 0;
       }
 `
 const Title = styled.h2`
-    color: white;
+    color: black;
     font-weight: 600;
     font-size: 1.875rem;
     padding-bottom: 1rem;
@@ -48,8 +50,8 @@ const ContactBtn = styled.a`
     font-family: 'Dancing Script', cursive;
     font-size: 1.875rem;
     background-color: transparent;
-    border: 2px solid white;
-    color:white;
+    border: 2px solid black;
+    color:black;
     padding:0rem 1rem;
     border-radius: 7px;
     text-decoration: none;
@@ -77,7 +79,7 @@ const ContactBtn = styled.a`
       }
 `
 const Contact = () => {
-    const mailToAddress='';
+    const mailToAddress='keendreamevents631@gmail.com';
     return (
         <Wrap id='contact'>
             <LeftCol>
@@ -85,8 +87,10 @@ const Contact = () => {
                     We’d Love To Hear From You!
                 </Title>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    If you would like to find out more details about the services we offer or talk about a bespoke event or set up please do not hesitate to contact us.
                 </p> 
+                <p>T: 07500 904 508</p>
+                <p>E: {mailToAddress} </p>
             </LeftCol>
             
             <ContactBtn href={`mailto:${mailToAddress}`}>
