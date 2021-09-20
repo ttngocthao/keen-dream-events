@@ -26,6 +26,8 @@ const serviceData =[
             {obj:'4 Meter Bell Tent',price:'£225'},
             {obj:'5 Meter Bell Tent',price:'£275'},
             {obj:'5 Meter Nova Air Dome',price:'£300'},
+            {obj:'Bell tent prices include all inside décor, beds, cushions, and any extras.',price:null}
+
 
         ],
         orderInList:1
@@ -42,6 +44,7 @@ const serviceData =[
             {obj:'Small Half Balloon Ring With Neon', price:'£100'},
             {obj:'Medium Half Balloon Ring With Neon', price:'£120'},
             {obj:'Large 150cm Balloon Ring With Neon', price:'£200'},
+            {obj:'2 Meter Hoop with Half Balloons', price:'£200'},
         ],
         orderInList:2
     },

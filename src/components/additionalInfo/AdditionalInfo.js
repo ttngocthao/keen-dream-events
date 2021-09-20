@@ -3,8 +3,13 @@ import styled from 'styled-components'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import DonutWallImg from '../../images/additional/keen-dream-events-donut-wall.png'
 import HarryPotterImg from '../../images/additional/keen-dream-events-harry-potter-party.png'
-import LoveLetterImg from '../../images/additional/keen-dream-events-love-letters.png'
+import LoveLetterImg from '../../images/additional/keen-dream-events-love-letters (1) (1).png'
 import MermaidImg from '../../images/additional/keen-dream-events-mermaid-party.png'
+import FourYrsImg from '../../images/additional/keen-dream-events-four-year-old-party (1).png'
+import WeddingImg from '../../images/additional/keen-dream-events-wedding (1).png'
+import TentImg from '../../images/additional/keen-dream-events-harry-potter-party-tent (1).png'
+
+
 const Wrap = styled.div`
     /* max-width: 1408px; */
     margin:0 auto;
@@ -38,10 +43,10 @@ const ImgRow = styled.div`
     }
 `
 const imgList =[
-  {  url:MermaidImg,orderInList:1},
-  {  url:DonutWallImg,orderInList:2},
+  {  url:FourYrsImg,orderInList:1},
+  {  url:WeddingImg,orderInList:2},
   {  url:LoveLetterImg,orderInList:3},
-  {  url:HarryPotterImg,orderInList:4}
+  {  url:TentImg,orderInList:4}
 
 ]
 

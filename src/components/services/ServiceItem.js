@@ -74,12 +74,15 @@ const StyledItem = styled.li`
         .price-list{
            min-height: 510px;
         }
-        .second-item,.first-item{
-            max-width: 240px;
+        .second-item{
+            max-width: 280px;
            
-            .price-list-item{
+            /* .price-list-item{
                 line-height: 1.8;
-            }
+            } */
+        }
+        .first-item li:last-child{
+            font-size: 14px;
         }
     
     }
