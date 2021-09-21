@@ -27,7 +27,9 @@ const Intro = () => {
     return (
         <Wrap>
             <h1>What is Keen Dream Events?</h1>
-            <p>Keen Dream Events was a dream created in lock down and since the start of 2021 has hit the ground running. We are passionate about making any Event extra special. We like to provide that extra touch that will bring the wow factor and put a smile on people’s faces. From Bell tents to balloon arches there isn’t much we won’t do.</p>
+            <p>Keen Dream Events strive to offer the most beautiful, unique and insta worthy set-ups for any party or event. We are passionate about making any event extra special, providing an added touch that will bring the wow factor and put a smile on people's faces. From bell tents to balloon arches, themed set-ups and Prosecco walls, there isn't much we won't do.
+
+</p>
         </Wrap>
     )
 }

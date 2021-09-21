@@ -63,7 +63,9 @@ const About = () => {
           <SectionTitle title='About me'/>  
           <FlexWrap>
              <p>
-              Hello my names Hollie and I started Keen Dream events with the dream of no longer having to work in finance. I always loved organising events and going that extra mile to make any party extra special. My daughters, nieces and nephews where my inspiration and continue to give me new ideas and motivate me daily! This business wouldn’t be possible without the help and support from my Sister Stacey and Husband Adam and a huge part of Keen Dreams success I owe to them.
+             Hello my name's Hollie and I started Keen Dream Events with the motivation of no longer working in the finance industry. I have always loved organising events and going that extra mile to make any party as memorable as possible. My daughters, nieces and nephews have provided me with daily inspiration and motivate me to offer the absolute best results! This business wouldn't be possible without the help and support of husband Adam and my sister Stacey, who are a huge part of Keen Dream Events success.
+
+
             </p>  
             <Avatar>
               <img className='desktop' src={AvatarImg} alt=''/>  

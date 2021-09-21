@@ -52,7 +52,9 @@ const StyledItem = styled.li`
              color: ${color.pink};
          }
      }
-
+    .first-item li:last-child{
+            font-size: 13px;
+        }
     @media only screen and (min-width: 700px){
         /* max-width: 495px; */
         box-sizing: border-box;
@@ -81,9 +83,7 @@ const StyledItem = styled.li`
                 line-height: 1.8;
             } */
         }
-        .first-item li:last-child{
-            font-size: 14px;
-        }
+       
     
     }
      /* @media only screen and (min-width: 1200px){
