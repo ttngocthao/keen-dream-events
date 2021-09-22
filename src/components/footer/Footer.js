@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import {color} from '../GlobalStyle.css'
 import FBIcon from '../../images/facebook-icon.png'
 import InstagramIcon from '../../images/instagram-icon.png'
-import TwitterIcon from '../../images/twitter-icon.png'
-import StarIcon from '../../images/star-icon.png'
+
 
 const StyledFooter = styled.footer`
     background-color: ${color.black};
@@ -43,27 +42,15 @@ const Info = styled.div`
 const SocialMediaData =[
     {
         icon:FBIcon,
-        url:'/#',
+        url:'https://www.facebook.com/Keen-Dream-Events-104469348305747',
         orderInList:1,
         label:'Facebook'
     },
     {
         icon:InstagramIcon,
-        url:'/#',
+        url:'https://www.instagram.com/keendreamevents/',
         orderInList:2,
         label:'Instagram'
-    },
-    {
-        icon:TwitterIcon,
-        url:'/#',
-        orderInList:3,
-        label:'Twitter'
-    },
-    {
-        icon:StarIcon,
-        url:'/#',
-        orderInList:4,
-        label:'TBC'
     }
 ]
 const Footer = () => {
@@ -74,7 +61,7 @@ const Footer = () => {
                 {orderedData.map((item,index)=>{
                     return(
                         <li key={index}>
-                            <a href={item.url} aria-label={`Follow us on ${item.label}`}>
+                            <a target='_blank' href={item.url} aria-label={`Follow us on ${item.label}`}>
                                 <img src={item.icon} alt=''/>
                             </a>
                         </li>

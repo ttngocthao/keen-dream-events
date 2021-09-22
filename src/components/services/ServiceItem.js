@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef }  from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {color} from '../GlobalStyle.css'
 const StyledItem = styled.li`
