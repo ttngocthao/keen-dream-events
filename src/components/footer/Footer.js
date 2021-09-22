@@ -61,7 +61,7 @@ const Footer = () => {
                 {orderedData.map((item,index)=>{
                     return(
                         <li key={index}>
-                            <a target='_blank' href={item.url} aria-label={`Follow us on ${item.label}`}>
+                            <a rel="noreferrer" target='_blank' href={item.url} aria-label={`Follow us on ${item.label}`}>
                                 <img src={item.icon} alt=''/>
                             </a>
                         </li>
